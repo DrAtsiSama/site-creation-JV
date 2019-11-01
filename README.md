@@ -1,2 +1,3 @@
 # site-creation-JV
-🎓 site statique sur la création de jeu vidéo
+🎓 Réalisé lors d'un projet tutoré en DUT Informatique 1ère année. 
+Site statique sur la création de jeu vidéo
