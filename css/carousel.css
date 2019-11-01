@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Thasadith');
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Happy+Monkey|ZCOOL+KuaiLe');
+.container {
+	margin: 0 auto;
+	width: 250px;
+	height: 200px;
+	position: relative;
+	perspective: 1000px;
+}
+
+.container,
+.next,
+.prev {
+	margin-top: 100px;
+}
+
+.carousel {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+
+.item {
+	color: #001716;
+	display: block;
+	position: absolute;
+	background: #000;
+	width: 250px;
+	height: 150px;
+	opacity: 0.95;
+	border-radius: 10px;
+	padding: 6px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.item h2 {
+	font-family: "ZCOOL KuaiLe", sans-serif;
+	margin: 5px;
+	margin-left: 0;
+	font-weight: bold;
+	border-bottom: 1px #001716 solid;
+	text-align: center;
+}
+
+.item p {
+	font-family: 'Happy Monkey', sans-serif;
+	letter-spacing: .5px;
+	margin: 0;
+}
+
+.a {
+	transform: rotateY(0deg) translateZ(250px);
+	background: #d5573b;
+	z-index: 3;
+}
+
+.b {
+	transform: rotateY(60deg) translateZ(250px);
+	background: #777da7;
+	z-index: 3;
+}
+
+.c {
+	transform: rotateY(120deg) translateZ(250px);
+	background: #69626d;
+	z-index: 2;
+}
+
+.d {
+	transform: rotateY(180deg) translateZ(250px);
+	z-index: 2;
+	background: #bcaf9c;
+}
+
+.e {
+	transform: rotateY(240deg) translateZ(250px);
+	background: #7b435b;
+	z-index: 1;
+}
+
+.f {
+	transform: rotateY(300deg) translateZ(250px);
+	background: #8c6239;
+	z-index: 1;
+}
+
+.next,
+.prev,
+.flip button {
+	color: #444;
+	position: absolute;
+	top: 112px;
+	padding: 1em 2em;
+	cursor: pointer;
+	background: #CCC;
+	border-radius: 5px;
+	border-top: 1px solid #FFF;
+	box-shadow: 0 5px 0 #999;
+	transition: box-shadow 0.1s, top 0.1s;
+}
+
+.next,
+.prev {
+	top: 375px;
+}
+
+button#btn {
+	display: block;
+	margin-left: 28px;
+	padding: 5px;
+}
+
+.next:hover,
+.prev:hover,
+.flip button:hover {
+	color: #000;
+}
+
+.flip button:active {
+	top: 114px;
+	box-shadow: 0 1px 0 #999;
+}
+
+.next:active,
+.prev:active {
+	top: 379px;
+	box-shadow: 0 1px 0 #999;
+}
+
+.next {
+	right: 5em;
+}
+
+.prev {
+	left: 5em;
+}
+
+.penseur {
+	height: 700px;
+	margin-top: -80px;
+	margin-right: 220px;
+	background-image: url("../img/concept/penseur-rodin.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.modal {
+	display: none;
+	position: absolute;
+	z-index: 110;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	transform: translateZ(300px);
+	border: 2px solid #ed1c24;
+	border-radius: 5px;
+}
+
+.modal-content {
+	background-color: rgba(255, 255, 255, 0.9);
+	margin: 0 0 15% auto;
+	width: 100%;
+	padding: 8px;
+}
+
+.modal-content p {
+	margin: 0;
+	margin-top: 5px;
+	font-family: 'Thasadith', sans-serif;
+}
+
+.modal-content p span {
+	font-weight: bold;
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 200px) and (max-width: 640px) {
+	* {
+		overflow-x: visible;
+	}
+	body {
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+	.penseur {
+		margin-left: -200px;
+		margin-right: 0;
+	}
+	.next,
+	.prev {
+		top: 250px;
+	}
+	.next:active,
+	.prev:active {
+		top: 42px;
+		box-shadow: 0 1px 0 #999;
+	}
+}

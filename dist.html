@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr">
+	<head>
+		<title>
+			Distribution - Création de jeu vidéo - Projet DUT INFO
+		</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/dist.css" rel="stylesheet">
+		<link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+		<script src="js/jquery-3.3.1.min.js">
+		</script>
+		<meta charset="utf-8" content="width=device-width, initial-scale=1.0" name="viewport">
+	</head>
+	<body>
+		<nav>
+			<div class="logo">
+				<a href="index.html"></a>
+			</div>
+
+			<ul>
+				<li class="mobile">
+					<a href="index.html">Accueil</a>
+				</li>
+
+				<li>
+					<a href="conceptualisation.html">Conceptualisation</a>
+				</li>
+
+				<li>
+					<a href="art.html">L'art</a>
+				</li>
+
+				<li>
+					<a href="prog.html">Programmation</a>
+				</li>
+
+				<li>
+					<a class="current" href="dist.html">Distribution</a>
+				</li>
+			</ul>
+		</nav>
+
+		<header>
+			<div class="headline">
+				<div class="inner">
+					<h1>
+						Projet M1106
+					</h1>
+
+					<p>
+						Quelles sont les étapes de création d'un jeu vidéo ?
+					</p>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section>
+				<img alt="" src="img/dist/logo.png">
+			</section>
+
+			<section>
+				<h1>
+					La distribution
+				</h1>
+
+				<p>
+					Afin de distribuer efficacement le produit, l’équipe devra tout au long de sa création, réaliser une campagne de communication pour attirer les futurs joueurs et produire un effet de hype.
+				</p>
+
+				<p>
+					Pour de grandes enteprises, la distribution se fait sur de grandes plateformes tel que Origin pour Electronic Arts, UPlay pour Ubisoft, etc...
+				</p>
+
+				<p>
+					Et pour les indépendants, la distribution est plutôt simple, certaines plateformes laisse de la place et mettent en avant des petits jeux tel que Steam, Steam Greenlight, Origin ou encore Xbox Live Indie. (il y a 1287 pages de jeu indépendants sur Steam).
+				</p>
+			</section>
+		</main>
+
+		<footer class="footer" id="foot">
+			<div class="footer-left">
+				<div class="footer-logo">
+				</div>
+
+				<p class="footer-links">
+					<a href="index.html">Accueil</a> · <a href="conceptualisation.html">Conceptualisation</a> · <a href="art.html">L'art</a> · <a href="prog.html">Programmation</a> · <a href="dist.html">Distribution</a> · <a href="repart.html">Répartition</a>
+				</p>
+
+				<div class="footer-icons">
+					<a href="https://fr-fr.facebook.com/"><i class="fab fa-facebook-square"></i></a> <a href="https://twitter.com/?lang=fr"><i class="fab fa-twitter"></i></a> <a href="https://discordapp.com/"><i class="fab fa-discord"></i></a> <a href="https://github.com/"><i class="fab fa-github"></i></a>
+				</div>
+				<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/fr/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/fr/88x31.png" /></a>
+			</div>
+
+			<div class="footer-right">
+				<p>
+					Nous contacter
+				</p>
+
+				<form action="#" method="post">
+					<input name="email" placeholder="Votre adresse mail" type="text">
+
+					<textarea name="message" placeholder="Entrez votre message"></textarea> <button>Envoyer</button>
+				</form>
+			</div>
+		</footer>
+		<script type="text/javascript">
+		  var $headline = $('.headline'),
+		     $inner = $('.inner'),
+		     $nav = $('nav'),
+		     navHeight = 75;
+
+		  $(window).scroll(function() {
+		  var scrollTop = $(this).scrollTop(),
+		         headlineHeight = $headline.outerHeight() - navHeight,
+		         navOffset = $nav.offset().top;
+
+		  $headline.css({
+		     'opacity': (1 - scrollTop / headlineHeight)
+		  });
+		  $inner.children().css({
+		     'transform': 'translateY('+ scrollTop * 0.4 +'px)'
+		  });
+		  if (navOffset > headlineHeight) {
+		     $nav.addClass('scrolled');
+		  } else {
+		     $nav.removeClass('scrolled');
+		  }
+		  });
+
+		  $(document).ready(function()
+		  {
+
+		     $('.headline').addClass('bleu');
+
+		     function changeBackground()
+		     {
+		         $('.headline').delay(5000).fadeOut(1000,function()
+		         {
+		             $(this).removeClass('bleu').addClass('violet').fadeIn(1000,function()
+		             {
+		                 $(this).delay(5000).fadeOut(1000,function()
+		                 {
+		                     $(this).removeClass('violet').addClass('vert').fadeIn(1000,function()
+		                     {
+		                         $(this).delay(5000).fadeOut(1000,function()
+		                         {
+		                             $(this).removeClass('vert').addClass('orange').fadeIn(1000,function()
+		                             {
+		                                 $(this).delay(5000).fadeOut(1000,function()
+		                                 {
+		                                     $(this).removeClass('orange').addClass('bleu').fadeIn(1000);
+		                                     changeBackground();
+		                                 });
+		                             });
+		                         });
+		                     });
+		                 });
+		             });
+		         });
+		     }
+		     changeBackground();
+
+
+		  });
+		</script>
+	</body>
+</html>

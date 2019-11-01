@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr">
+	<head>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/art.css" rel="stylesheet">
+		<meta charset="utf-8" content="width=device-width, initial-scale=1.0" name="viewport">
+		<link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+		<script src="js/jquery-3.3.1.min.js">
+		</script>
+		<title>
+			L'Art - Création de jeu vidéo - Projet DUT INFO
+		</title>
+	</head>
+	<body>
+		<nav>
+			<div class="logo">
+				<a href="index.html"></a>
+			</div>
+
+			<ul>
+				<li class="mobile">
+					<a href="index.html">Accueil</a>
+				</li>
+
+				<li>
+					<a href="conceptualisation.html">Conceptualisation</a>
+				</li>
+
+				<li>
+					<a class="current" href="#">L'art</a>
+				</li>
+
+				<li>
+					<a href="prog.html">Programmation</a>
+				</li>
+
+				<li>
+					<a href="dist.html">Distribution</a>
+				</li>
+			</ul>
+		</nav>
+
+		<header>
+			<div class="headline">
+				<div class="inner">
+					<h1>
+						Projet M1106
+					</h1>
+
+					<p>
+						Quelles sont les étapes de création d'un jeu vidéo ?
+					</p>
+				</div>
+			</div>
+		</header>
+
+		<div class="slideshow-container"> <!--diaporama de texte -->
+			<div class="mySlides"> <!--premiere slide-->
+				<h1>
+					L'art graphique
+				</h1>
+
+				<p>
+					Suite à la conceptualisation s'en vient une étape plus libre d’action celle du design artistique, cette étape à la fois aimer et détester de certains est crucial au projet. Le design est présent sur de nombreuses choses tel que chaque arrière-plan, boutons, barre d’état, animations et personnages ; tout ceci est beaucoup plus simple à réaliser quand la préparation de la conceptualisation est solide, il y de la place pour l’imagination et le changement Créer des textures, des paysages, des modèles, des sons, des ambiances.
+				</p>
+			</div>
+
+			<div class="mySlides"><!--deuxieme slide-->
+				<h1>
+					L'art musical (part.1)
+				</h1>
+
+				<p>
+					La musique partie intégrante des jeux vidéo est composé de bande son ou composé de morceau(x) musical/aux pour ceux-ci. Voyant le jour dans les années 1970 avec une réputation d’être des “sous-musiques” étant produit grâce à des puces électronique ou machines 8 bits, il nous reste tout de même en tête la nostalgie d’entendre des musiques iconiques
+				</p>
+			</div>
+
+			<div class="mySlides"><!--troisieme slide-->
+				<h1>
+					L'art musical (part.2)
+				</h1>
+
+				<p>
+					Au fil du temps la qualité des musiques de jeux vidéo se rapproche tant bien que mal de celle des films. Les bandes son sont commercialisées aux côtés des musiques de cinéma et sont jouées en concert comme au japon ou encore à la cité philharmonie de Paris.
+				</p>
+			</div>
+
+			<div class="mySlides"><!--quatrieme slide-->
+				<h1>
+					L'art musical (part.3)
+				</h1>
+
+				<p>
+					La musique dans les jeux vidéo n’est pas seulement une musique collée à un jeu vidéo. La musique est partie intégrante dans l'expérience du jeu, c’est elle même qui est le plus à même à transmettre des émotions afin de mettre en garde, encourager, récompenser, guider ou encore faire peur au joueur. Tout comme les graphiques les thèmes musicaux ont évolué, nous avons eu le droit a divers thèmes tel que Tetris ou Mario.
+				</p>
+			</div>
+		</div>
+
+		<div class="dot-container"><!--boutons de changement de slide-->
+			<span class="dot" onclick="currentSlide(1)"></span> <span class="dot" onclick="currentSlide(2)"></span> <span class="dot" onclick="currentSlide(3)"></span> <span class="dot" onclick="currentSlide(4)"></span>
+		</div>
+
+		<footer class="footer">
+			<div class="footer-left">
+				<div class="footer-logo"><!--logo iut-->
+				</div>
+
+				<p class="footer-links">
+					<a href="index.html">Accueil</a> · <a href="conceptualisation.html">Conceptualisation</a> · <a href="art.html">L'art</a> · <a href="prog.html">Programmation</a> · <a href="dist.html">Distribution</a> · <a href="repart.html">Répartition</a>
+				</p>
+
+				<div class="footer-icons">
+					<a href="https://fr-fr.facebook.com/"><i class="fab fa-facebook-square"></i></a> <a href="https://twitter.com/?lang=fr"><i class="fab fa-twitter"></i></a> <a href="https://discordapp.com/"><i class="fab fa-discord"></i></a> <a href="https://github.com/"><i class="fab fa-github"></i></a>
+				</div>
+				<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/fr/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/fr/88x31.png" /></a>
+			</div>
+
+			<div class="footer-right">
+				<p>
+					Nous contacter
+				</p>
+
+				<form action="#" method="post">
+					<input name="email" placeholder="Votre adresse mail" type="text">
+
+					<textarea name="message" placeholder="Entrez votre message"></textarea> <button>Envoyer</button>
+				</form>
+			</div>
+		</footer>
+		<script type="text/javascript">
+		  var $headline = $('.headline'),
+		     $inner = $('.inner'),
+		     $nav = $('nav'),
+		     navHeight = 75;
+
+		  $(window).scroll(function() {
+		  var scrollTop = $(this).scrollTop(),
+		         headlineHeight = $headline.outerHeight() - navHeight,
+		         navOffset = $nav.offset().top;
+
+		  $headline.css({
+		     'opacity': (1 - scrollTop / headlineHeight)
+		  });
+		  $inner.children().css({
+		     'transform': 'translateY('+ scrollTop * 0.4 +'px)'
+		  });
+		  if (navOffset > headlineHeight) {
+		     $nav.addClass('scrolled');
+		  } else {
+		     $nav.removeClass('scrolled');
+		  }
+		  });
+
+		  $(document).ready(function()
+		  {
+
+		     $('.headline').addClass('bleu');
+
+		     function changeBackground()
+		     {
+		         $('.headline').delay(5000).fadeOut(1000,function()
+		         {
+		             $(this).removeClass('bleu').addClass('violet').fadeIn(1000,function()
+		             {
+		                 $(this).delay(5000).fadeOut(1000,function()
+		                 {
+		                     $(this).removeClass('violet').addClass('vert').fadeIn(1000,function()
+		                     {
+		                         $(this).delay(5000).fadeOut(1000,function()
+		                         {
+		                             $(this).removeClass('vert').addClass('orange').fadeIn(1000,function()
+		                             {
+		                                 $(this).delay(5000).fadeOut(1000,function()
+		                                 {
+		                                     $(this).removeClass('orange').addClass('bleu').fadeIn(1000);
+		                                     changeBackground();
+		                                 });
+		                             });
+		                         });
+		                     });
+		                 });
+		             });
+		         });
+		     }
+		     changeBackground();
+
+
+		  });
+		  var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		slides[slideIndex-1].style.display = "block";
+		dots[slideIndex-1].className += " active";
+		}
+		</script>
+	</body>
+</html>
